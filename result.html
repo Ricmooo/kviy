@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Results for Level {{ level }}</h1>
+<p>Your score: {{ score }} / {{ questions | length }}</p>
+<a href="{{ url_for('index') }}">Go back to the main page</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Level {{ level }}</h1>
+<form method="post">
+  {% for idx, question in questions %}
+    <div>
+      <p>{{ question.question }}</p>
+      {% for choice in question.choices %}
+        <input type="radio" name="{{ idx }}" value="{{ choice }}" required> {{ choice }}<br>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}

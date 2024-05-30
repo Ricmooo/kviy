@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Koliko dobro poznajes futbal</h1>
+    <p class="pocetna">Choose your adventure:</p>
+    <ul>
+        <li><a class="button" href="{{ url_for('level', level='Easy Peasy') }}">Easy Peasy</a></li>
+        <li><a class="button" href="{{ url_for('level', level='Not Too Shabby') }}">Not Too Shabby</a></li>
+        <li><a class="button" href="{{ url_for('level', level='Let\'s Get Serious') }}">Let's Get Serious</a></li>
+        <li><a class="button" href="{{ url_for('level', level='Getting Tricky') }}">Getting Tricky</a></li>
+        <li><a class="button" href="{{ url_for('level', level='Ultimate Challenge') }}">Ultimate Challenge</a></li>
+    </ul>
+</div>
+{% endblock %}
